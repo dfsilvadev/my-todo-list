@@ -1,0 +1,31 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      { "targets": { "node": "current", "esmodules": true } }
+    ],
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ],
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    "babel-plugin-styled-components",
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@": "./src",
+          "@assets": "./src/assets",
+          "@components": "./src/components",
+          "@stories": "./src/stories",
+          "@styles": "./src/styles",
+          "@utils": "./src/utils"
+        }
+      }
+    ]
+  ]
+}

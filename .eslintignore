@@ -1,0 +1,8 @@
+# Ignore artifacts:
+build
+coverage
+node_modules
+vscode
+
+# Ignore all .hbs files
+*.hbs
