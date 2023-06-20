@@ -18,8 +18,8 @@ ${({ theme }) => css`
   }
   html,
   body {
-    background: ${theme.colors.background};
-    color: ${theme.colors.text};
+    background: ${theme.colors.gray600};
+    color: ${theme.colors.gray300};
     transition: background 0.15s ease-in-out;
   }
   body {
@@ -31,7 +31,7 @@ ${({ theme }) => css`
   h4,
   h5,
   h6 {
-    font-weight: 700;
+    font-weight: ${theme.font.weight.bold};
   }
   ol,
   ul {
@@ -42,8 +42,8 @@ ${({ theme }) => css`
   textarea,
   select,
   button {
-    font: 400 1rem ${theme.font.family}, sans-serif;
-    color: ${theme.colors.text};
+    font: 400 ${theme.font.sizes.default} ${theme.font.family}, sans-serif;
+    color: ${theme.colors.gray300};
     transition: color 0.15s ease-in-out;
   }
   span {
@@ -55,7 +55,7 @@ ${({ theme }) => css`
   }
   a,
   p {
-    font-size: ${theme.font.sizes.medium};
+    font-size: ${theme.font.sizes.small};
   }
   button {
     cursor: pointer;
