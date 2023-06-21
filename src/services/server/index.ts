@@ -15,11 +15,7 @@ export function makeServer({ environment = "test" } = {}) {
     },
     routes() {
       this.namespace = "api";
-      this.get("/tasks", () => {
-        console.log(this.schema.all("tasks"));
-
-        return this.schema.all("tasks");
-      });
+      this.get("/tasks", () => this.schema.all("tasks"));
     }
   });
 
