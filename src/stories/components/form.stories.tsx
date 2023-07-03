@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Container, Form } from "@/components";
 
 export default {
-  title: "Components/Form",
+  title: "Form/Form",
   component: Form,
   tags: ["autodocs"],
   argTypes: {},
