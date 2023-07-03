@@ -1,14 +1,18 @@
+import { ForwardRefRenderFunction, forwardRef } from "react";
 import * as S from "./styles";
 
-import { IButtonProps } from "./types";
+import { ButtonType, IButtonProps } from "./types";
 
-const Button = ({ children, icon }: IButtonProps) => {
+const Button: ForwardRefRenderFunction<ButtonType, IButtonProps> = (
+  { children, icon, ...props },
+  ref
+) => {
   return (
-    <S.ButtonContent>
+    <S.ButtonContent ref={ref} {...props}>
       {!!children && children}
       {!!icon && icon}
     </S.ButtonContent>
   );
 };
 
-export default Button;
+export default forwardRef(Button);
