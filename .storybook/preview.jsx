@@ -27,7 +27,7 @@ export const parameters = {
     }
   },
   backgrounds: {
-    default: "light",
+    default: "primary",
     values: [
       {
         name: "primary",
