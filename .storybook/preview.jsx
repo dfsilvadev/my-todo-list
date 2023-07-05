@@ -31,11 +31,11 @@ export const parameters = {
     values: [
       {
         name: "primary",
-        value: "#121214"
+        value: "#1A1A1A"
       },
       {
         name: "light",
-        value: "#E1E1E6"
+        value: "#F2F2F2"
       }
     ]
   },
