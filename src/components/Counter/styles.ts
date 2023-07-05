@@ -8,5 +8,6 @@ export const Wrapper = styled.section`
     font-size: 0.75rem;
     font-weight: ${theme.font.weight.bold};
     line-height: normal;
+    color: ${theme.colors.gray200};
   `}
 `;
