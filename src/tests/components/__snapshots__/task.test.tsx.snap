@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Task should render the task with status created 1`] = `
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #4EA8DE;
+  padding: 0.5rem;
+  color: #F2F2F2;
+  font-weight: 700;
+  border: 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  height: 3rem;
+  padding: 0.8rem 1rem;
+  font-size: 0.875rem;
+  background: none;
+}
+
+.c4:hover {
+  background: #808080;
+}
+
+.c4 svg {
+  width: 1.5rem;
+}
+
+.c4 svg + span {
+  margin-left: 0.5rem;
+}
+
+.c4:hover {
+  background: #0D0D0D;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.c2 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0.2rem solid #4EA8DE;
+  border-radius: 100%;
+  -webkit-transition: background border 0.15s ease-in-out;
+  transition: background border 0.15s ease-in-out;
+  position: relative;
+  outline: none;
+}
+
+.c2:before {
+  content: "";
+  width: 0.3rem;
+  height: 0.6rem;
+  border: 0.15rem solid #F2F2F2;
+  border-top: 0;
+  border-left: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0.1rem;
+  right: 0.3rem;
+  opacity: 0;
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+}
+
+.c2:focus {
+  border-color: #5E60CE;
+}
+
+.c2:checked {
+  border-color: #5E60CE;
+  background: #5E60CE;
+}
+
+.c2:checked:before {
+  opacity: 1;
+}
+
+.c0 {
+  background: #262626;
+  padding: 1rem;
+  border: 1px solid #333333;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.06);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.c3 {
+  font-size: 0.875rem;
+  line-height: 140%;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  overflow: hidden;
+  color: #F2F2F2;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div>
+  <section
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <input
+        class="c2"
+        id=""
+        role="checkbox"
+        type="checkbox"
+        value=""
+      />
+    </div>
+    <p
+      class="c3"
+    >
+      Estudar ReactJS - Hooks e Custom Hooks
+    </p>
+    <button
+      class="c4"
+      type="button"
+    >
+      <svg
+        fill="currentColor"
+        height="20"
+        viewBox="0 0 256 256"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="none"
+          height="256"
+          width="256"
+        />
+        <line
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="24"
+          x1="216"
+          x2="40"
+          y1="60"
+          y2="60"
+        />
+        <line
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="24"
+          x1="104"
+          x2="104"
+          y1="104"
+          y2="168"
+        />
+        <line
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="24"
+          x1="152"
+          x2="152"
+          y1="104"
+          y2="168"
+        />
+        <path
+          d="M200,60V208a8,8,0,0,1-8,8H64a8,8,0,0,1-8-8V60"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="24"
+        />
+        <path
+          d="M168,60V36a16,16,0,0,0-16-16H104A16,16,0,0,0,88,36V60"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="24"
+        />
+      </svg>
+    </button>
+  </section>
+</div>
+`;
