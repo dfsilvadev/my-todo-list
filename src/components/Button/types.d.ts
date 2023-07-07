@@ -1,10 +1,18 @@
-import { ButtonHTMLAttributes, ReactNode } from "react";
+import {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  ElementType,
+  ReactNode
+} from "react";
 
-export type ButtonType = HTMLButtonElement;
+export type ButtonTypes =
+  | AnchorHTMLAttributes<HTMLAnchorElement>
+  | ButtonHTMLAttributes<HTMLButtonElement>;
 
-type ButtonHTMLAttributesType = ButtonHTMLAttributes<HTMLButtonElement>;
-
-export interface IButtonProps extends ButtonHTMLAttributesType {
-  children?: ReactNode;
+export type ButtonProps = {
+  size?: "small" | "medium" | "large";
+  fullWidth?: boolean;
+  minimal?: boolean;
   icon?: ReactNode;
-}
+  as?: ElementType;
+} & ButtonTypes;

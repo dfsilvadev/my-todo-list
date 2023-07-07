@@ -1,17 +1,31 @@
-import { ForwardRefRenderFunction, forwardRef } from "react";
+import { forwardRef, ForwardRefRenderFunction } from "react";
+
 import * as S from "./styles";
+import { ButtonProps } from "./types";
 
-import { ButtonType, IButtonProps } from "./types";
-
-const Button: ForwardRefRenderFunction<ButtonType, IButtonProps> = (
-  { children, icon, ...props },
+const Button: ForwardRefRenderFunction<S.WrapperProps, ButtonProps> = (
+  {
+    children,
+    size = "medium",
+    fullWidth = false,
+    minimal = false,
+    icon,
+    ...props
+  },
   ref
 ) => {
   return (
-    <S.ButtonContent ref={ref} {...props}>
-      {!!children && children}
+    <S.Wrapper
+      size={size}
+      fullWidth={fullWidth}
+      hasIcon={!!icon}
+      minimal={minimal}
+      ref={ref}
+      {...props}
+    >
       {!!icon && icon}
-    </S.ButtonContent>
+      {!!children && <span>{children}</span>}
+    </S.Wrapper>
   );
 };
 
