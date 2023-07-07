@@ -13,6 +13,10 @@ export const Wrapper = styled.section`
     display: flex;
     align-items: center;
     gap: 1rem;
+
+    & button:hover {
+      color: ${theme.colors.danger};
+    }
   `}
 `;
 
