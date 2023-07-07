@@ -102,8 +102,9 @@ exports[`Task should render the task with status created 1`] = `
   transition: 0.15s ease-in-out;
 }
 
-.c2:focus {
-  border-color: #5E60CE;
+.c2:hover {
+  border-color: #1E6F9F;
+  background: #262626;
 }
 
 .c2:checked {
@@ -113,6 +114,11 @@ exports[`Task should render the task with status created 1`] = `
 
 .c2:checked:before {
   opacity: 1;
+}
+
+.c2:checked:hover {
+  border-color: #9164fa;
+  background: #9164fa;
 }
 
 .c0 {
@@ -130,6 +136,10 @@ exports[`Task should render the task with status created 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
+}
+
+.c0 button:hover {
+  color: #E25858;
 }
 
 .c3 {

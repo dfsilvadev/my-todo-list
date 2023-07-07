@@ -58,8 +58,9 @@ exports[`<Checkbox /> should be accessible with tab 1`] = `
   transition: 0.15s ease-in-out;
 }
 
-.c1:focus {
-  border-color: #5E60CE;
+.c1:hover {
+  border-color: #1E6F9F;
+  background: #262626;
 }
 
 .c1:checked {
@@ -69,6 +70,11 @@ exports[`<Checkbox /> should be accessible with tab 1`] = `
 
 .c1:checked:before {
   opacity: 1;
+}
+
+.c1:checked:hover {
+  border-color: #9164fa;
+  background: #9164fa;
 }
 
 .c2 {
