@@ -10,7 +10,8 @@ export const Wrapper = styled.section`
     border-radius: 0.5rem;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.06);
 
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 2fr auto;
     align-items: center;
     gap: 1rem;
 

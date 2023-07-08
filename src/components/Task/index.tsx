@@ -8,7 +8,7 @@ import { ITaskProps } from "./types";
 
 const Task = ({ description, status }: ITaskProps) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper role="listitem" aria-label="task card">
       <Checkbox isChecked={status === "done"} />
 
       <S.TaskDescription status={status}>{description}</S.TaskDescription>
