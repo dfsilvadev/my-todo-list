@@ -23,8 +23,8 @@ const Button: ForwardRefRenderFunction<S.WrapperProps, ButtonProps> = (
       ref={ref}
       {...props}
     >
-      {!!icon && icon}
       {!!children && <span>{children}</span>}
+      {!!icon && icon}
     </S.Wrapper>
   );
 };
