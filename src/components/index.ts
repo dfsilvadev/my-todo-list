@@ -8,3 +8,4 @@ export { default as Input } from "./Input";
 export { default as Logo } from "./Logo";
 export { default as Task } from "./Task";
 export { default as TaskCountInfo } from "./TaskCountInfo";
+export { default as TaskList } from "./TaskList";
