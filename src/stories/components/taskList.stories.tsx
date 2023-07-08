@@ -17,7 +17,12 @@ const Template: ComponentStory<typeof TaskList> = (args) => (
   </Container>
 );
 
-export const List = Template.bind({});
-List.args = {
+export const WithTasks = Template.bind({});
+WithTasks.args = {
   tasks
+};
+
+export const Empty = Template.bind({});
+Empty.args = {
+  tasks: []
 };

@@ -1,4 +1,4 @@
-import { Counter, Task, TaskCountInfo } from "@/components";
+import { Counter, Empty, Task, TaskCountInfo } from "@/components";
 
 import * as S from "./styles";
 
@@ -26,7 +26,7 @@ const TaskList = ({ tasks }: ITaskListProps) => {
             />
           ))
         ) : (
-          <p>Lista vazia</p>
+          <Empty />
         )}
       </S.BodyList>
     </S.Wrapper>
