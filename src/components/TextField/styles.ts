@@ -1,6 +1,6 @@
 import styled, { DefaultTheme, css } from "styled-components";
 
-import { InputComponentProps } from "./types";
+import { TextFieldComponentProps } from "./types";
 
 const variant = {
   withError: (theme: DefaultTheme) => css`
@@ -15,7 +15,7 @@ const variant = {
   `
 };
 
-export const InputComponent = styled.div<InputComponentProps>`
+export const TextFieldComponent = styled.div<TextFieldComponentProps>`
   ${({ theme, error }) => css`
     flex: 1;
 
