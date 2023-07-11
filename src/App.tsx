@@ -2,13 +2,18 @@ import { ThemeProvider } from "styled-components";
 
 import { HomePage } from "./pages";
 
+import { TaskContextProvider } from "@contexts/taskContext";
+
 import { DefaultTheme, GlobalStyles } from "@/styles";
 
 function App() {
   return (
     <ThemeProvider theme={DefaultTheme}>
       <GlobalStyles />
-      <HomePage />
+
+      <TaskContextProvider>
+        <HomePage />
+      </TaskContextProvider>
     </ThemeProvider>
   );
 }

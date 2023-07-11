@@ -34,7 +34,7 @@ const taskDescriptionVariant = {
 
 export const TaskDescription = styled.p<TaskDescriptionProps>`
   ${({ theme, status }) => css`
-    font-size: 0.875rem;
+    font-size: 1rem;
     line-height: 140%;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;

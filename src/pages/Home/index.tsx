@@ -1,7 +1,5 @@
 import { Container, Form, Header, TaskList } from "@/components";
 
-import { tasks } from "@mocks/tasks";
-
 import * as S from "./styles";
 
 const Home = () => {
@@ -11,7 +9,8 @@ const Home = () => {
 
       <Container>
         <Form />
-        <TaskList tasks={tasks} />
+
+        <TaskList />
       </Container>
     </S.Wrapper>
   );

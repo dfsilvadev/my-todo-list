@@ -1,10 +1,28 @@
 import { renderWithTheme } from "@/utils/tests/renderWithTheme";
-import { screen } from "@testing-library/react";
+import { screen, waitFor } from "@testing-library/react";
 
 import { HomePage } from "@/pages";
 
+import useTaskContext from "@/hooks/useTasksContext";
+
+import { tasks } from "@mocks/tasks";
+
+jest.mock("@/hooks/useTasksContext");
+
+const mockUseTaskContext = useTaskContext as jest.MockedFunction<
+  typeof useTaskContext
+>;
+
 describe("Home", () => {
-  it("should render homepage correctly", () => {
+  it("should render homepage correctly", async () => {
+    await waitFor(() => {
+      mockUseTaskContext.mockReturnValue({
+        tasks,
+        createTask: jest.fn(),
+        updateTask: jest.fn()
+      });
+    });
+
     renderWithTheme(<HomePage />);
 
     expect(screen.getByRole("img", { name: "logo" })).toBeInTheDocument();

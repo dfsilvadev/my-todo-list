@@ -138,7 +138,7 @@ exports[`Task should render the task with status created 1`] = `
 }
 
 .c3 {
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 140%;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;

@@ -15,7 +15,23 @@ export function makeServer({ environment = "test" } = {}) {
     },
     routes() {
       this.namespace = "api";
+
       this.get("/tasks", () => this.schema.all("tasks"));
+
+      this.post("/tasks", (schema, request) => {
+        const data = JSON.parse(request.requestBody);
+        return schema.create("tasks", data);
+      });
+
+      this.put("/tasks/:id", (_, request) => {
+        const { id } = request.params;
+        const { checked } = JSON.parse(request.requestBody);
+
+        return server.db.tasks.update(id, {
+          status: !checked ? "created" : "done",
+          checked
+        });
+      });
     }
   });
 
