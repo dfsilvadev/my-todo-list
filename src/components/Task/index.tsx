@@ -1,17 +1,31 @@
+import { useState } from "react";
 import { Trash } from "phosphor-react";
 
 import { Button, Checkbox } from "@/components";
+
+import useTaskContext from "@/hooks/useTasksContext";
 
 import * as S from "./styles";
 
 import { ITaskProps } from "./types";
 
-const Task = ({ description, status }: ITaskProps) => {
-  return (
-    <S.Wrapper>
-      <Checkbox isChecked={status === "done"} />
+const Task = ({ description, checked, taskId }: ITaskProps) => {
+  const [isChecked, setIsChecked] = useState(checked);
 
-      <S.TaskDescription status={status}>{description}</S.TaskDescription>
+  const { updateTask } = useTaskContext();
+
+  const onCheck = (status: boolean) => {
+    setIsChecked(status);
+    updateTask(taskId, status);
+  };
+
+  return (
+    <S.Wrapper role="listitem" aria-label="task card">
+      <Checkbox isChecked={isChecked} onCheck={onCheck} />
+
+      <S.TaskDescription status={isChecked ? "done" : "created"}>
+        {description}
+      </S.TaskDescription>
 
       <Button
         type="button"

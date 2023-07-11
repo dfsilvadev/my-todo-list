@@ -2,6 +2,15 @@
 
 exports[`Task should render the task with status created 1`] = `
 .c4 {
+  background: #4EA8DE;
+  padding: 0.5rem;
+  color: #F2F2F2;
+  font-weight: 700;
+  border: 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -14,15 +23,7 @@ exports[`Task should render the task with status created 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: #4EA8DE;
-  padding: 0.5rem;
-  color: #F2F2F2;
-  font-weight: 700;
-  border: 0;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  gap: 0.5rem;
   height: 3rem;
   padding: 0.8rem 1rem;
   font-size: 0.875rem;
@@ -35,10 +36,6 @@ exports[`Task should render the task with status created 1`] = `
 
 .c4 svg {
   width: 1.5rem;
-}
-
-.c4 svg + span {
-  margin-left: 0.5rem;
 }
 
 .c4:hover {
@@ -102,8 +99,9 @@ exports[`Task should render the task with status created 1`] = `
   transition: 0.15s ease-in-out;
 }
 
-.c2:focus {
-  border-color: #5E60CE;
+.c2:hover {
+  border-color: #1E6F9F;
+  background: #262626;
 }
 
 .c2:checked {
@@ -115,16 +113,19 @@ exports[`Task should render the task with status created 1`] = `
   opacity: 1;
 }
 
+.c2:checked:hover {
+  border-color: #9164fa;
+  background: #9164fa;
+}
+
 .c0 {
   background: #262626;
   padding: 1rem;
   border: 1px solid #333333;
   border-radius: 0.5rem;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.06);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 2fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -132,8 +133,12 @@ exports[`Task should render the task with status created 1`] = `
   gap: 1rem;
 }
 
+.c0 button:hover {
+  color: #E25858;
+}
+
 .c3 {
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 140%;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -146,7 +151,9 @@ exports[`Task should render the task with status created 1`] = `
 
 <div>
   <section
+    aria-label="task card"
     class="c0"
+    role="listitem"
   >
     <div
       class="c1"

@@ -1,3 +1,3 @@
 export interface ICounterProps {
-  value: string;
+  value: string | number;
 }

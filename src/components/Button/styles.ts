@@ -28,10 +28,6 @@ const wrapperModifiers = {
   withIcon: () => css`
     svg {
       width: 1.5rem;
-
-      & + span {
-        margin-left: 0.5rem;
-      }
     }
   `,
   minimal: (theme: DefaultTheme) => css`
@@ -51,9 +47,6 @@ const wrapperModifiers = {
 
 export const Wrapper = styled.button<WrapperProps>`
   ${({ theme, size, fullWidth, minimal, hasIcon, disabled }) => css`
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     background: ${theme.colors.blueLight};
     padding: 0.5rem;
     color: ${theme.colors.gray100};
@@ -62,6 +55,11 @@ export const Wrapper = styled.button<WrapperProps>`
     border-radius: 0.5rem;
     cursor: pointer;
     text-decoration: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 
     ${!!size && wrapperModifiers[size]}
     ${!!fullWidth && wrapperModifiers.fullWidth()}

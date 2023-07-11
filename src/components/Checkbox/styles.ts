@@ -35,14 +35,23 @@ export const Input = styled.input`
       opacity: 0;
       transition: 0.15s ease-in-out;
     }
-    &:focus {
-      border-color: ${theme.colors.purpleDark};
+
+    &:hover {
+      border-color: ${theme.colors.blueDark};
+      background: ${theme.colors.gray500};
     }
+
     &:checked {
       border-color: ${theme.colors.purpleDark};
       background: ${theme.colors.purpleDark};
+
       &:before {
         opacity: 1;
+      }
+
+      &:hover {
+        border-color: ${theme.colors.purpleLight};
+        background: ${theme.colors.purpleLight};
       }
     }
   `}

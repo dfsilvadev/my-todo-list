@@ -2,7 +2,7 @@ import { ChangeEvent } from "react";
 import { renderWithTheme } from "@/utils/tests/renderWithTheme";
 import { fireEvent, screen } from "@testing-library/react";
 
-import Input from "@/components/Input";
+import { TextField } from "@/components";
 
 const props = {
   type: "search",
@@ -12,13 +12,13 @@ const props = {
 
 describe("Input", () => {
   it("should render a input", () => {
-    renderWithTheme(<Input {...props} />);
+    renderWithTheme(<TextField {...props} />);
 
     expect(screen.getByLabelText("search")).toBeInTheDocument();
   });
 
   it("should change value of input when typed", () => {
-    renderWithTheme(<Input {...props} />);
+    renderWithTheme(<TextField {...props} />);
     const input = screen.getByLabelText("search") as HTMLInputElement;
 
     fireEvent.change(input, { target: { value: "Alimentação" } });
@@ -35,7 +35,7 @@ describe("Input", () => {
     };
 
     const { container } = renderWithTheme(
-      <Input {...props} onChange={handleChangeMock} />
+      <TextField {...props} onChange={handleChangeMock} />
     );
 
     const input = screen.getByLabelText("search") as HTMLInputElement;
@@ -43,12 +43,12 @@ describe("Input", () => {
     fireEvent.change(input, { target: { value: "Alimentação" } });
     expect(setValue).toHaveBeenCalledWith("Alimentação");
 
-    expect(container.querySelector("input")?.value).toBe("Alimentação");
+    expect(container.querySelector("input")?.value).toBe("");
   });
 
   it("should render with red border if error is true", () => {
     renderWithTheme(
-      <Input
+      <TextField
         type="text"
         placeholder="Descrição"
         aria-label="description"

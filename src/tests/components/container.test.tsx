@@ -12,7 +12,7 @@ describe("Container", () => {
 
     expect(container.firstChild).toHaveStyle({
       width: "100%",
-      maxWidth: "70rem",
+      maxWidth: "46rem",
       margin: "0 auto",
       padding: "0 1rem"
     });
@@ -20,7 +20,7 @@ describe("Container", () => {
     expect(container.firstChild).toMatchInlineSnapshot(`
       .c0 {
         width: 100%;
-        max-width: 70rem;
+        max-width: 46rem;
         margin: 0 auto;
         padding: 0 1rem;
       }
